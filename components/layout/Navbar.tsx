@@ -6,7 +6,8 @@ import Link from 'next/link';
 const navigation = [{ name: 'Blog', href: '/blog' }];
 
 export const Navbar = () => {
-  const { data: session, status } = useSession();
+  // const { data: session, status } = useSession();
+  const status: string = 'unauthenticated'
 
   return (
     <Disclosure as="nav">
