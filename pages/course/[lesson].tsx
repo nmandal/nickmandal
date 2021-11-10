@@ -22,7 +22,8 @@ const components = {
 };
 
 export default function LessonPage({ source, frontMatter }: Props) {
-  const { data: session, status } = useSession();
+  // const { data: session, status } = useSession();
+  const status: string = 'authenticated';
 
   return (
     <>
