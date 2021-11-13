@@ -1,16 +1,12 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-const Home: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>Nick Mandal</title>
-        <meta name="description" content="Nick Mandal's digital playground" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-    </div>
-  );
-};
+import Intro from '../components/Intro';
 
-export default Home;
+export default function Home() {
+  return (
+    <div className="relative px-4 sm:px-6 lg:px-8">
+      <Intro />
+    </div>
+  )
+}

@@ -1,14 +1,13 @@
 import 'styles/index.css';
 import type { AppProps } from 'next/app';
-import { Layout } from 'components/layout';
 import { SessionProvider } from 'next-auth/react';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <SessionProvider>
-      <Layout>
+      <div className="relative py-20 bg-white overflow-hidden">
         <Component {...pageProps} />
-      </Layout>
+      </div>
     </SessionProvider>
   );
 }
