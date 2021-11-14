@@ -2,6 +2,7 @@ import { ethers } from "ethers";
 import { Fragment, useEffect, useState } from "react";
 import { Tab } from '@headlessui/react'
 
+import Link from 'next/link'
 import {
     ArrowNarrowLeftIcon,
     HomeIcon,
@@ -247,8 +248,8 @@ export default function Mint() {
             <div className="py-3">
     <nav className="flex" aria-label="Breadcrumb">
                 <div className="flex sm:hidden">
+                  <Link href="/">
                   <a
-                    href="/"
                     className="group inline-flex space-x-3 text-sm font-medium text-gray-500 hover:text-gray-700"
                   >
                     <ArrowNarrowLeftIcon
@@ -257,15 +258,18 @@ export default function Mint() {
                     />
                     <span>Back Home</span>
                   </a>
+                  </Link>
                 </div>
                 <div className="hidden sm:block">
                   <ol role="list" className="flex items-center space-x-4">
                     <li>
                       <div>
-                        <a href="/" className="text-gray-400 hover:text-gray-500">
+                      <Link href="/">
+                        <a className="text-gray-400 hover:text-gray-500">
                           <HomeIcon className="flex-shrink-0 h-5 w-5" aria-hidden="true" />
                           <span className="sr-only">Home</span>
                         </a>
+                        </Link>
                       </div>
                     </li>
                     {breadcrumbs.map((item) => (
@@ -280,13 +284,14 @@ export default function Mint() {
                           >
                             <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
                           </svg>
+                          <Link href={item.href}>
                           <a
-                            href={item.href}
                             className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700"
                             aria-current={item.current ? 'page' : undefined}
                           >
                             {item.name}
                           </a>
+                          </Link>
                         </div>
                       </li>
                     ))}
@@ -327,7 +332,8 @@ export default function Mint() {
 
             <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
             {currentAccount === "" ? renderNotConnectedContainer() : renderMintUI()}
-            <a className="mr-2" target="_blank" href={OPENSEA_LINK}>
+            <Link href={OPENSEA_LINK}>
+            <a className="mr-2" target="_blank" rel="noreferrer" >
               <button
                 type="button"
                 className="w-full bg-blue-50 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-blue-700 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-blue-500"
@@ -335,6 +341,7 @@ export default function Mint() {
                 View Collection
               </button>
               </a>
+              </Link>
             </div>
 
             <div className="border-t border-gray-200 mt-10 pt-10">
@@ -353,7 +360,8 @@ export default function Mint() {
               <h3 className="text-sm font-medium text-gray-900">Share</h3>
               <ul role="list" className="flex items-center space-x-6 mt-4">
                 <li>
-                  <a href="https://www.instagram.com/nick_mandal/" target="_blank" className="flex items-center justify-center w-6 h-6 text-gray-400 hover:text-gray-500">
+                <Link href="https://www.instagram.com/nick_mandal/">
+                  <a target="_blank" rel="noreferrer" className="flex items-center justify-center w-6 h-6 text-gray-400 hover:text-gray-500">
                     <span className="sr-only">Share on Instagram</span>
                     <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                       <path
@@ -363,14 +371,17 @@ export default function Mint() {
                       />
                     </svg>
                   </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="https://twitter.com/nick_mandal" target="_blank" className="flex items-center justify-center w-6 h-6 text-gray-400 hover:text-gray-500">
+                <Link href="https://twitter.com/nick_mandal">
+                  <a target="_blank" rel="noreferrer" className="flex items-center justify-center w-6 h-6 text-gray-400 hover:text-gray-500">
                     <span className="sr-only">Share on Twitter</span>
                     <svg className="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
                     </svg>
                   </a>
+                  </Link>
                 </li>
               </ul>
             </div>

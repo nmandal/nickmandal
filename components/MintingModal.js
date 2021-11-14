@@ -48,7 +48,7 @@ export default function MintingModal({link, showModal}) {
                    </Dialog.Title>
                    <div className="mt-2">
                      <p className="text-sm text-gray-500">
-                     Hey there! We've minted your NFT and sent it to your wallet. It may be blank right now. It can take a max of 10 min to show up on OpenSea.
+                     Hey there! We&apos;ve minted your NFT and sent it to your wallet. It may be blank right now. It can take a max of 10 min to show up on OpenSea.
                      </p>
                    </div>
                  </div>
