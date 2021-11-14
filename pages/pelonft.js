@@ -182,7 +182,7 @@ export default function Mint() {
           console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
           getTotalNFTsMintedSoFar();
           setShowMintedModal(true)
-          setModalText(`https://testnets.opensea.io/assets/${CONTRACT_ADDRESS}/${tokenId.toNumber()}`)
+          setModalText(`https://testnets.opensea.io/assets/${CONTRACT_ADDRESS}/${nftsMinted}`)
   
         } else {
           console.log("Ethereum object doesn't exist!");
