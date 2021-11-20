@@ -8,7 +8,7 @@ const tier = {
   features: [
     'Private Discord Community',
     'Access to online ebook',
-    'Access to resources list',
+    'Access to resources  list',
   ],
 };
 
