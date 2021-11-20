@@ -9,6 +9,7 @@ export default async function handler(req, res) {
           {
             // TODO: replace this with the `price` of the product you want to sell
             price: 'price_1JxyD7Gnxp5WFA6c9rGBdhKM',
+            quantity: 1
           },
         ],
         payment_method_types: ['card'],
