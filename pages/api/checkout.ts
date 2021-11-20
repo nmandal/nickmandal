@@ -13,7 +13,7 @@ export default async function handler(req, res) {
           },
         ],
         payment_method_types: ['card'],
-        mode: 'payment',
+        mode: 'subscription',
         success_url: `${req.headers.origin}/?success=true&session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${req.headers.origin}/?canceled=true`,
       });
