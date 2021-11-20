@@ -16,17 +16,17 @@ interface Props {
   }[];
 }
 
-const Blog = ({ posts }: Props) => {
+const Writing = ({ posts }: Props) => {
   return (
     <div className="prose mx-auto my-24">
-      <h1>Blog</h1>
+      <h1>Writing</h1>
 
       <ul>
         {posts.map((post) => (
           <li key={post.filePath}>
             <Link
-              as={`/blog/${post.filePath.replace(/\.mdx?$/, '')}`}
-              href={`/blog/[slug]`}
+              as={`/writing/${post.filePath.replace(/\.mdx?$/, '')}`}
+              href={`/writing/[slug]`}
             >
               <a>{post.data.title}</a>
             </Link>
@@ -48,7 +48,7 @@ const Blog = ({ posts }: Props) => {
   );
 };
 
-export default Blog;
+export default Writing;
 
 export const getStaticProps: GetStaticProps = async () => {
   const posts = postFilePaths.map((filePath) => {

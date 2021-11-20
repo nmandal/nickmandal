@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 export default function Intro () {
   return (
     <div className="mt-6 prose prose-md text-gray-500 mx-auto">
@@ -12,11 +10,6 @@ export default function Intro () {
       <p>
         In my free time, I do contract work for startups, build web3 applications and track my health.
       </p>
-      <div className="mt-5">
-        <Link href="/pelonft">
-        <a>PeloNFT</a>
-        </Link>
-      </div>
     </div>
   )
 }

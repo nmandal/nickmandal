@@ -8,8 +8,7 @@ export default async function handler(req, res) {
         line_items: [
           {
             // TODO: replace this with the `price` of the product you want to sell
-            price: 'price_1JkVmQDcgX7dWwtuEokjccFt',
-            quantity: 1,
+            price: 'price_1JxyD7Gnxp5WFA6c9rGBdhKM',
           },
         ],
         payment_method_types: ['card'],

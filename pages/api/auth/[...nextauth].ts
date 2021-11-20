@@ -23,7 +23,6 @@ export default NextAuth({
         url,
         provider: { server, from },
       }) => {
-        // TODO: add prisma query
         const user = await prisma.user.findUnique({
           where: {
             email,
