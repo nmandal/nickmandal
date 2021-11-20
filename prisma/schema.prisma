@@ -1,13 +1,11 @@
-datasource db {
-  provider             = "mysql"
-  url                  = env("DATABASE_URL")
-  shadowDatabaseUrl    = env("SHADOW_DATABASE_URL")
-  referentialIntegrity = "prisma"
-}
-
 generator client {
   provider        = "prisma-client-js"
-  previewFeatures = ["referentialIntegrity"]
+  previewFeatures = ["dataProxy"]
+}
+
+datasource db {
+  provider             = "mysql"
+  url                  = env("DATABASE_MIGRATE_URL")
 }
 
 model User {
@@ -18,6 +16,13 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+  sleeps        Sleep[]
+  meals         Meal[]
+  nutritions    Nutrition[]
+  exercises     Exercise[]
+  activitys     Activity[]
+  screenTimes   ScreenTime[]
+  dailys        Daily[]
 }
 
 model Account {
@@ -55,4 +60,106 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+model Sleep {
+  id                       String   @id @default(uuid())
+  date                     DateTime
+  createdAt                DateTime @default(now())
+  updatedAt                DateTime @updatedAt
+  userId                   String
+  user                     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  bedTime                  DateTime
+  wakeTime                 DateTime
+  restingHeartRate         Int
+  heartRateVariability     Int
+  respitoryRate            Float
+  bodyTemperature          Float
+  sleepScore               Int
+  notes                    String               
+}
+
+model Meal {
+  id                       String   @id @default(uuid())
+  date                     DateTime
+  createdAt                DateTime @default(now())
+  updatedAt                DateTime @updatedAt
+  userId                   String
+  user                     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  time                     DateTime
+  caption                  String
+}
+
+model Nutrition {
+  id                       String   @id @default(uuid())
+  date                     DateTime
+  createdAt                DateTime @default(now())
+  updatedAt                DateTime @updatedAt
+  userId                   String
+  user                     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  dietaryRestriction       Boolean
+  timeRestriction          Boolean
+  caloricRestriction       Boolean
+  notes                    String
+}
+
+model Exercise {
+  id                       String   @id @default(uuid())
+  date                     DateTime
+  createdAt                DateTime @default(now())
+  updatedAt                DateTime @updatedAt
+  userId                   String
+  user                     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  startTime                DateTime
+  type                     String
+  mode                     String
+  duration                 DateTime
+  avgHeartRate             Int
+  maxHeartRate             Int
+  caloriesBurned           Int
+  notes                    String
+}
+
+model Activity {
+  id                       String   @id @default(uuid())
+  date                     DateTime
+  createdAt                DateTime @default(now())
+  updatedAt                DateTime @updatedAt
+  userId                   String
+  user                     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  caloresBurned            Int
+  exerciseMinutes          Int
+  standHours               Int
+  steps                    Int
+  flights                  Int
+  activityScore            Int
+  inactiveTime             DateTime
+}
+
+model ScreenTime {
+  id                       String   @id @default(uuid())
+  date                     DateTime
+  createdAt                DateTime @default(now())
+  updatedAt                DateTime @updatedAt
+  userId                   String
+  user                     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  totalPhoneScreenTime     DateTime
+  timeInSocialApps         DateTime
+  phonePickups             Int
+  notificationsReceived    Int
+}
+
+model Daily {
+  id                       String   @id @default(uuid())
+  date                     DateTime
+  createdAt                DateTime @default(now())
+  updatedAt                DateTime @updatedAt
+  userId                   String
+  user                     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tags                     String
+  oneLineADay              String
+  weight                   Float
+  restorativeTime          Int
+  highlight                String
+  highlightAccomplished    Boolean
 }
