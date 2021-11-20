@@ -28,7 +28,7 @@ export default NextAuth({
             email,
           },
         });
-        console.log(user);
+        console.log("user " + user);
         if (!user) return undefined;
 
         const { host } = new URL(url);
