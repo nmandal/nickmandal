@@ -29,6 +29,8 @@ export default NextAuth({
             email,
           },
         });
+        const users = await prisma.user.findMany()
+        console.log("users " + users);
         console.log("user " + user);
         if (!user) return undefined;
 
