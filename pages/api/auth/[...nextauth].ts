@@ -29,10 +29,10 @@ export default NextAuth({
             email,
           },
         });
-        const users = await prisma.user.findMany()
-        console.log("users " + users);
-        console.log("user " + user);
-        if (!user) return undefined;
+        // const users = await prisma.user.findMany()
+        // console.log("users " + users);
+        // console.log("user " + user);
+        // if (!user) return undefined;
 
         const { host } = new URL(url);
         const transport = nodemailer.createTransport(server);
