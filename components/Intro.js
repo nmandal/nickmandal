@@ -7,9 +7,7 @@ export default function Intro () {
         rel="noopener noreferrer" href="https://www.bamfunds.com">Balyasny Asset Management</a>, 
         a multi-strategy investment firm, where I work on the portfolio finance team.
       </p>
-      <p>
-        In my free time, I do contract work for startups, build web3 applications and track my health.
-      </p>
+      <p>I&apos;m especially interested in crypto, health data, and content creation.</p>
     </div>
   )
 }

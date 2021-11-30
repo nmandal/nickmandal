@@ -2,7 +2,8 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 
 import Intro from '../components/Intro';
-import Projects from '../components/Projects';
+import Now from '../components/Now';
+import Connect from '../components/Connect';
 
 import {useSession, signIn, signOut} from 'next-auth/react';
 
@@ -19,11 +20,12 @@ export default function Home() {
         </>
         :
         <>
-{/* <button onClick={()  => signIn()}>Sign in</button> */}
         </>
       }
       </>
       <Intro />
+      <Now />
+      <Connect />
     </div>
   )
 }

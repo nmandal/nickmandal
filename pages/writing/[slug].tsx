@@ -23,17 +23,12 @@ const components = {
   Button,
 };
 
-export default function PostPage({ source, frontMatter, readingTime }: Props) {
+export default function PostPage({ source, frontMatter }: Props) {
   return (
     <>
       <main className="prose mx-auto my-24">
         <h1>{frontMatter.title}</h1>
-        <p className="description">{frontMatter.description}</p>
-        <div className="flex space-x-5">
-          <p>{readingTime}</p>
-          <p>-</p>
           <p>{frontMatter.date}</p>
-        </div>
         <MDXRemote {...source} components={components} />
       </main>
     </>

@@ -16,34 +16,41 @@ interface Props {
   }[];
 }
 
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
+
 const Writing = ({ posts }: Props) => {
   return (
     <div className="prose mx-auto my-24">
       <h1>Writing</h1>
 
-      <ul>
-        {posts.map((post) => (
-          <li key={post.filePath}>
+      <div className="bg-white">
+      <div>
+        <div className="-my-10">
+          {posts.map((post, postIdx) => (
             <Link
               as={`/writing/${post.filePath.replace(/\.mdx?$/, '')}`}
               href={`/writing/[slug]`}
             >
-              <a>{post.data.title}</a>
-            </Link>
-            <p>{post.data.description}</p>
-            <div className="space-x-4">
-              {post.data.categories.map((category: string, i: React.Key) => (
-                <span
-                  key={i}
-                  className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800"
-                >
-                  {category}
-                </span>
-              ))}
+            <div key={post.filePath} className="flex text-sm text-gray-500 space-x-4">
+              <div className={classNames(postIdx === 0 ? '' : 'border-t border-gray-200', 'flex-1 py-2')}>
+                  <h3 className="font-medium text-gray-900">{post.data.title}</h3>
+                
+                <div
+                  className="mt-4 prose prose-sm max-w-none text-gray-500"
+                  dangerouslySetInnerHTML={{ __html: post.data.description }}
+                />
+                <p>
+                  <time dateTime={post.data.datetime}>{post.data.date}</time>
+                </p>
+              </div>
             </div>
-          </li>
-        ))}
-      </ul>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
     </div>
   );
 };
