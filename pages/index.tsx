@@ -3,6 +3,8 @@ import Head from 'next/head';
 
 import Intro from '../components/Intro';
 import Now from '../components/Now';
+import Writing from '../components/Writing';
+import Projects from '../components/Projects';
 import Connect from '../components/Connect';
 
 import {useSession, signIn, signOut} from 'next-auth/react';
@@ -24,6 +26,8 @@ export default function Home() {
       }
       </>
       <Intro />
+      <Writing />
+      <Projects />
       <Now />
       <Connect />
     </div>
