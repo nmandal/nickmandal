@@ -29,11 +29,12 @@ const Writing = ({ posts }: Props) => {
       <div>
         <div className="-my-10">
           {posts.map((post, postIdx) => (
-            <Link
+
+            <div key={post.filePath} className="flex text-sm text-gray-500 space-x-4">
+                          <Link
               as={`/writing/${post.filePath.replace(/\.mdx?$/, '')}`}
               href={`/writing/[slug]`}
             >
-            <div key={post.filePath} className="flex text-sm text-gray-500 space-x-4">
               <div className={classNames(postIdx === 0 ? '' : 'border-t border-gray-200', 'flex-1 py-2')}>
                   <h3 className="font-medium text-gray-900">{post.data.title}</h3>
                 
@@ -45,8 +46,9 @@ const Writing = ({ posts }: Props) => {
                   <time dateTime={post.data.datetime}>{post.data.date}</time>
                 </p>
               </div>
+              </Link>
+
             </div>
-            </Link>
           ))}
         </div>
       </div>
