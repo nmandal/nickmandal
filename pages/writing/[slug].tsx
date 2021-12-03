@@ -26,7 +26,7 @@ const components = {
 export default function PostPage({ source, frontMatter }: Props) {
   return (
     <>
-      <main className="prose mx-auto my-24">
+      <main className="prose mx-auto my-24 relative px-4 sm:px-6 lg:px-8">
         <h1>{frontMatter.title}</h1>
           <p>{frontMatter.date}</p>
         <MDXRemote {...source} components={components} />
