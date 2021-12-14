@@ -21,6 +21,12 @@ function classNames(...classes) {
 }
 
 const Writing = ({ posts }: Props) => {
+  const filteredBlogPosts = posts
+  .sort(
+    (a, b) =>
+      Number(new Date(b.data.datetime)) - Number(new Date(a.data.datetime))
+  );
+
   return (
     <div className="prose mx-auto my-24">
       <h1>Writing</h1>

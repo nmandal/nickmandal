@@ -1,52 +1,134 @@
 ---
 title: "Quantified Self"
 date: "December 2, 2021"
-datetime: '2021-12-02'
-description: 'First post, yo'
+datetime: "2021-12-02"
+description: "First post, yo"
 ---
 
-- Collect the most important dataset: truth, health and wealth
+Everyone always talks about how important data is.
 
-I'm purposefully adding context to the data to tell a story...
+I want to own my data. 
+I want to collect the most important dataset: my health data, my financial data, and how I spend my time.
 
-Schema:
+I don't just want to collect the data, I want to have context around the data so that I can tell a story.
 
-### Health
+### Health Data
+
+I collect health data based 
 
 
 Sleep
-- bedTime                  DateTime
-- wakeTime                 DateTime
-- restingHeartRate         Int
-- Heart Rate Variability     Int
-- Respitory Rate            Float
-- Body Temperature          Float
+- Bed Time (hh:mm)
+- Wake Up Time (hh:mm)
+- Resting Heart Rate (number)
+- Heart Rate Variability (number)
+- Respitory Rate (decimal)
+- Body Temperature (decimal)
 - Sleep Score (number)
 - Notes (text)  
-- Sleep Location
+- City (text)
 - Location Type (single select: apartment/hotel/...)
 - Dreams (y/n)
 - Nightmares (y/n)
 
 I use an Oura ring to capture my sleep data.
 
-Nutrition:
+Nutritional Biochemistry:
 
 I measure my nutritional biochemistry at both a micro and macro level.
 I log each of my meals throughout the day using the Levels app.
 At the end of the day, I rate myself on the three levers of nutrition.
 
-Meals
+There is an even more granular level to nutrition as well. Twice a year I'll 
+wear a continuous glu
+
+Meal
+- Timestamp (hh:mm)
+- Image (url)
+- Caption (text)
+
+Nutrition
+- Dietary Restriction (y/n)
+- Time Restriction (y/n)
+- Caloric Restriction (y/n)
+- Notes (text)
 
 
 I use Levels to log my meals.
 
+Exercise Physiology
+
+Similar to how I measure nutritional biochemistry, I measure my exercise physiology on both a micro and macro level.
+
 
 Exercise
+- Timestamp (hh:mm)
+- Type (single select)
+- Mode (single select)
+- Duration (hh:mm)
+- Average Heart Rate (number)
+- Maximum Heart Rate (number)
+- Calories Burned (number)
+- Notes (text)
+
+Activity
+- Calores Burned (number)
+- Exercise Minutes (number)
+- Stand Hours (number)
+- Steps (number)
+- Flights (number)
+- Activity Score (number)
+- Inactive Time (number)
+
+I log exercises with my Apple Watch.
+
+Exogenous Factors
+
+Daily
+- Tags (multi-select)
+- One Line a Day (text)
+- Weight (decimal)
+- Restorative Time (hh:mm)
+- Highlight (text)
+- Highlight Accomplished (y/n)
+
+### Time
+
+Screen Time
+- Total Phone Screen Time (hh:mm)
+- Time In Social Apps (hh:mm)
+- Phone Pickups (number)
+- Notifications Received (number)
+
+Deep work
+
+Media Consumption
+
+
+
+### Wealth
+
+Money Snapshot
+- Wealthfront Checking
+- Schwab Checking
+- Vanguard Roth increasing
+- Schwab Roth 401(k)
+- HSA
+- Vanguard Rollover IRA
+- Wealthfront Investing
+- Wealthfront Strategy
+- Vanguard Brokerage
+- Cash App Stocks
+- Gemini
+- Coinbase
+- BlockFi
+
+
+Transactions
 
 
 
 TODO:
 - Deep work hours
-- time on laptop?
+- time on laptop? (Rescue time)
 - Media consumption
