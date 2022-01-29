@@ -9,35 +9,43 @@ import { GetStaticProps } from 'next';
 const projects = [
     {
         "name": "Blynd",
-        "url": "https://eatblynd.com"
+        "url": "https://eatblynd.com",
+        "description": "Food ordering platform that takes the decision fatigue out of deciding what to order."
     },
     {
         "name": "BlyndApp",
-        "url": "https://app.eatblynd.com"
+        "url": "https://app.eatblynd.com",
+        "description": "Blynd PWA platform for restaurants and customers built with Django."
     },
     {
         "name": "MenYou",
-        "url": "https://menyou.eatblynd.com"
+        "url": "https://menyou.eatblynd.com",
+        "description": "QR menu platform for restaurants and influencers to build and curate custom menus"
     },
     {
         "name": "PeloNFT",
-        "url": "https://pelonft.vercel.app"
+        "url": "https://pelonft.vercel.app",
+        "description": "The PeloNFT collection lets you mint your own Peloton workout. Inspired by Loot, PeloNFT generates workout attibutes randomly and completely on-chain."
     },
     {
         "name": "NFT Health Game",
-        "url": "https://healthgame.vercel.app"
+        "url": "https://healthgame.vercel.app",
+        "description": "Team up with some of the best health influencers, mint their NFT and learn how to be healthy."
     },
     {
         "name": "ETH Journal",
-        "url": "https://ethjournal.vercel.app"
+        "url": "https://ethjournal.vercel.app",
+        "description": "One line a day journal with a chance to win Ethereum"
     },
     {
         "name": "Quantified Self Platform",
-        "url": "https://quantself.vercel.app"
+        "url": "https://quantself.vercel.app",
+        // "description": "One line a day journal with a chance to win Ethereum"
     },
     {
         "name": "SOLe Collective",
-        "url": "https://solenfts.vercel.app"
+        "url": "https://solenfts.vercel.app",
+        // "description": "One line a day journal with a chance to win Ethereum"
     },
 ]
 
@@ -64,10 +72,10 @@ const Projects = () => {
               <div className={classNames(postIdx === 0 ? '' : 'border-t border-gray-200', 'flex-1 py-2')}>
                   <h3 className="font-medium text-gray-900">{project.name}</h3>
                 
-                {/* <div
+                <div
                   className="mt-4 prose prose-sm max-w-none text-gray-500"
-                  dangerouslySetInnerHTML={{ __html: post.data.description }}
-                /> */}
+                  dangerouslySetInnerHTML={{ __html: project.description }}
+                />
                 {/* <p>
                   <time dateTime={post.data.datetime}>{post.data.date}</time>
                 </p> */}
