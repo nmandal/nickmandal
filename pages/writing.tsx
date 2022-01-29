@@ -28,7 +28,7 @@ const Writing = ({ posts }: Props) => {
   );
 
   return (
-    <div className="prose mx-auto my-24">
+    <div className="prose mx-auto px-4 sm:px-6 lg:px-8 my-24">
       <h1>Writing</h1>
 
       <div className="bg-white">
@@ -44,10 +44,10 @@ const Writing = ({ posts }: Props) => {
               <div className={classNames(postIdx === 0 ? '' : 'border-t border-gray-200', 'flex-1 py-2')}>
                   <h3 className="font-medium text-gray-900">{post.data.title}</h3>
                 
-                <div
+                {/* <div
                   className="mt-4 prose prose-sm max-w-none text-gray-500"
                   dangerouslySetInnerHTML={{ __html: post.data.description }}
-                />
+                /> */}
                 <p>
                   <time dateTime={post.data.datetime}>{post.data.date}</time>
                 </p>

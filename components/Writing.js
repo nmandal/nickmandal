@@ -23,7 +23,7 @@ export default function Writing () {
                 </Link>
             </li>
         </ul>
-        {/* <h6 className="prose prose-md text-gray-500 mx-auto">
+        <h6 className="prose prose-md text-gray-500 mx-auto">
             <Link href="/writing">
             <a className="focus:outline-none">
             <span className="absolute inset-0" aria-hidden="true" />
@@ -31,7 +31,7 @@ export default function Writing () {
             <span aria-hidden="true"> &rarr;</span>
             </a>
             </Link>
-        </h6> */}
+        </h6>
       </div>
     )
   }
