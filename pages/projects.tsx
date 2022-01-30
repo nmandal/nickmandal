@@ -10,23 +10,14 @@ const projects = [
     {
       "name": "Quantified Self Platform",
       "url": "https://quantself.vercel.app",
-      "description": "A platform to aggregate your excercise, sleep, and food data to make better decisions for your health."
+      "description": "A platform to aggregate your excercise, sleep, and food data to make better decisions for your health. Building with Next.js, PlanetScale, Prisma, GraphQL, and deployed on Vercel."
   },
     {
         "name": "Blynd",
         "url": "https://eatblynd.com",
         "description": "Food ordering platform that takes the decision fatigue out of deciding what to order."
     },
-    {
-        "name": "BlyndApp",
-        "url": "https://app.eatblynd.com",
-        "description": "Blynd PWA platform for restaurants and customers built with Django."
-    },
-    {
-        "name": "MenYou",
-        "url": "https://menyou.eatblynd.com",
-        "description": "QR menu platform for restaurants and influencers to build and curate custom menus"
-    },
+
     {
         "name": "PeloNFT",
         "url": "https://pelonft.vercel.app",
@@ -38,15 +29,26 @@ const projects = [
         "description": "Team up with some of the best health influencers, mint their NFT and learn how to be healthy."
     },
     {
-        "name": "ETH Journal",
-        "url": "https://ethjournal.vercel.app",
-        "description": "One line a day journal with a chance to win Ethereum"
-    },
+      "name": "SOLe Collective",
+      "url": "https://sneakernft.vercel.app",
+      "description": "Sneaker NFT project on Solana using Metaplex."
+  },
+
     {
-        "name": "SOLe Collective",
-        "url": "https://solenfts.vercel.app",
-        "description": "UNDER CONSTRUCTION: Sneaker NFT project on Solana"
-    },
+      "name": "BlyndApp",
+      "url": "https://app.eatblynd.com",
+      "description": "Blynd PWA platform for restaurants and customers built with Django."
+  },
+  {
+      "name": "MenYou",
+      "url": "https://menyou.eatblynd.com",
+      "description": "QR menu platform for restaurants and influencers to build and curate custom menus."
+  },
+  {
+    "name": "ETH Journal",
+    "url": "https://ethjournal.vercel.app",
+    "description": "One line a day journal with a Ethereum lottery."
+},
 ]
 
 
