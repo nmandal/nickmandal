@@ -8,6 +8,11 @@ import { GetStaticProps } from 'next';
 
 const projects = [
     {
+      "name": "Quantified Self Platform",
+      "url": "https://quantself.vercel.app",
+      "description": "A platform to aggregate your excercise, sleep, and food data to make better decisions for your health."
+  },
+    {
         "name": "Blynd",
         "url": "https://eatblynd.com",
         "description": "Food ordering platform that takes the decision fatigue out of deciding what to order."
@@ -36,11 +41,6 @@ const projects = [
         "name": "ETH Journal",
         "url": "https://ethjournal.vercel.app",
         "description": "One line a day journal with a chance to win Ethereum"
-    },
-    {
-        "name": "Quantified Self Platform",
-        "url": "https://quantself.vercel.app",
-        "description": "A platform to aggregate your excercise, sleep, and food data to make better decisions for your health."
     },
     {
         "name": "SOLe Collective",
