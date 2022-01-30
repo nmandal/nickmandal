@@ -40,12 +40,12 @@ const projects = [
     {
         "name": "Quantified Self Platform",
         "url": "https://quantself.vercel.app",
-        // "description": "One line a day journal with a chance to win Ethereum"
+        "description": "A platform to aggregate your excercise, sleep, and food data to make better decisions for your health."
     },
     {
         "name": "SOLe Collective",
         "url": "https://solenfts.vercel.app",
-        // "description": "One line a day journal with a chance to win Ethereum"
+        "description": "UNDER CONSTRUCTION: Sneaker NFT project on Solana"
     },
 ]
 
