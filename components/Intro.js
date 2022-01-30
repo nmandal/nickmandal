@@ -8,7 +8,6 @@ export default function Intro () {
         a multi-strategy investment firm, where I work on the portfolio finance team.
       </p>
       <p>I&apos;m especially interested in crypto, health data, and content creation.</p>
-      <p>Check out some of my <a className="underline" href="/writing">writing</a> and <a className="underline" href="/projects">projects</a></p>
     </div>
   )
 }

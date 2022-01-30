@@ -35,15 +35,15 @@ export default function Projects () {
         </ul>
 
       </div>
-              {/* <h6 className="prose prose-md text-gray-500 mx-auto">
+              <h6 className="prose prose-md text-gray-500 mx-auto">
             <Link href="/projects">
             <a className="focus:outline-none">
-            <span className="absolute inset-0" aria-hidden="true" />
+            <span className="inset-0" aria-hidden="true" />
                 View all projects
             <span aria-hidden="true"> &rarr;</span>
             </a>
             </Link>
-        </h6> */}
+        </h6>
       </>
     )
   }
