@@ -6,6 +6,7 @@ import Now from '../components/Now';
 import Writing from '../components/Writing';
 import Projects from '../components/Projects';
 import Connect from '../components/Connect';
+import NavBar from '../components/NavBar';
 
 import {useSession, signIn, signOut} from 'next-auth/react';
 
@@ -25,6 +26,7 @@ export default function Home() {
         </>
       }
       </>
+      <NavBar />
       <Intro />
       <Writing />
       <Projects />
