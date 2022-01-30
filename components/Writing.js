@@ -9,17 +9,17 @@ export default function Writing () {
         <ul>
             <li>
                 <Link href="/writing/health-framework">
-                    <a>My Health Framework</a>
+                    <a>Health Framework</a>
                 </Link>
             </li>
             <li>
                 <Link href="/writing/financial-machine">
-                    <a>My Financial Machine</a>
+                    <a>Financial Machine</a>
                 </Link>
             </li>
             <li>
                 <Link href="/writing/quantified-self">
-                    <a>My Quantified Self Setup</a>
+                    <a>Quantified Self Setup</a>
                 </Link>
             </li>
         </ul>
