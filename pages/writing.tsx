@@ -36,6 +36,8 @@ const Writing = ({ posts }: Props) => {
         <div className="-my-10">
           {posts.map((post, postIdx) => (
 
+            
+
             <div key={post.filePath} className="flex text-sm text-gray-500 space-x-4">
                           <Link
               as={`/writing/${post.filePath.replace(/\.mdx?$/, '')}`}
