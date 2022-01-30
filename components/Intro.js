@@ -1,6 +1,6 @@
 export default function Intro () {
   return (
-    <div className="mt-6 prose prose-md text-gray-500 mx-auto">
+    <div className="pt-20 mt-6 prose prose-md text-gray-500 mx-auto">
       {/* <h4>Nick Mandal</h4> */}
       <p>
         I&apos;m a software engineer at <a className="underline" target="_blank"
