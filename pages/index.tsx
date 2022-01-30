@@ -29,6 +29,7 @@ export default function Home() {
       {/* <NavBar /> */}
       <Intro />
       <Writing />
+      
       <Projects />
       <Now />
       <Connect />
